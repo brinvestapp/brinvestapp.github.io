@@ -241,6 +241,21 @@
             
             .rounded-3xl { border-radius: 16px !important; }
             .rounded-2xl { border-radius: 12px !important; }
+            
+            /* Fix Alexandre's buttons wrapping */
+            .flex.gap-3 {
+                flex-wrap: wrap !important;
+            }
+            
+            .flex.gap-3 a {
+                font-size: 0.875rem !important;
+                padding: 8px 16px !important;
+            }
+            
+            .flex.gap-3 a i {
+                width: 16px !important;
+                height: 16px !important;
+            }
         }
         
         @media (max-width: 480px) {
@@ -882,8 +897,8 @@
                         <div class="flex-1">
                             <h3 class="text-4xl font-black text-slate-900 mb-2">Rodrigo Serviuc Pavezi</h3>
                             <p class="text-2xl text-blue-600 font-bold mb-4">Founder & CEO</p>
-                            <a href="https://www.linkedin.com/in/rodrigopavezi/" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all font-semibold shadow-lg hover:shadow-xl hover:scale-105">
-                                <i data-lucide="linkedin" style="width: 20px; height: 20px;"></i>
+                            <a href="https://www.linkedin.com/in/rodrigopavezi/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all font-medium text-sm shadow-lg hover:shadow-xl hover:scale-105">
+                                <i data-lucide="linkedin" style="width: 16px; height: 16px;"></i>
                                 LinkedIn Profile
                             </a>
                         </div>
@@ -1318,7 +1333,7 @@
                     </p>
                     <p class="flex items-center justify-center gap-3">
                         <i data-lucide="mail" class="text-blue-300" style="width: 36px; height: 36px;"></i>
-                        <span>Contact for more information</span>
+                        <span>rodrigopavezi@brinvest.app</span>
                     </p>
                     <p class="flex items-center justify-center gap-3">
                         <i data-lucide="globe" class="text-blue-300" style="width: 36px; height: 36px;"></i>
