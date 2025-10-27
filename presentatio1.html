@@ -6,17 +6,23 @@
     <title>brRWA - Brazilian Fixed Income RWA Presentation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
         
         * { font-family: 'Inter', sans-serif; }
         
-        body { overflow: hidden; }
+        body { 
+            overflow: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
         
         .slide {
             display: none;
             min-height: 100vh;
             animation: slideIn 0.6s ease-out;
+            overflow-y: auto;
         }
         
         .slide.active { display: block; }
@@ -83,7 +89,7 @@
         
         .nav-btn {
             position: fixed;
-            bottom: 40px;
+            bottom: 20px;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -93,6 +99,10 @@
             cursor: pointer;
             transition: all 0.3s;
             z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
         }
         
         .nav-btn:hover {
@@ -100,8 +110,18 @@
             transform: scale(1.05);
         }
         
-        .nav-prev { left: 40px; }
-        .nav-next { right: 40px; }
+        .nav-prev { left: 20px; }
+        .nav-next { right: 20px; }
+        
+        @media (max-width: 768px) {
+            .nav-btn {
+                padding: 10px 16px;
+                font-size: 12px;
+                bottom: 10px;
+            }
+            .nav-prev { left: 10px; }
+            .nav-next { right: 10px; }
+        }
         
         .progress-bar {
             position: fixed;
@@ -152,6 +172,83 @@
         .counter {
             font-variant-numeric: tabular-nums;
         }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            body {
+                overflow-y: auto;
+            }
+            
+            .slide {
+                padding: 20px 0 !important;
+            }
+            
+            h1 { font-size: 3rem !important; }
+            h2 { font-size: 2rem !important; }
+            h3 { font-size: 1.5rem !important; }
+            
+            .glass-card {
+                padding: 20px !important;
+                margin: 10px !important;
+            }
+            
+            .stat-card {
+                margin-bottom: 16px;
+            }
+            
+            .team-avatar, .step-number {
+                width: 80px !important;
+                height: 80px !important;
+                font-size: 2rem !important;
+            }
+            
+            .text-9xl { font-size: 4rem !important; }
+            .text-8xl { font-size: 3.5rem !important; }
+            .text-7xl { font-size: 3rem !important; }
+            .text-6xl { font-size: 2.5rem !important; }
+            .text-5xl { font-size: 2rem !important; }
+            .text-4xl { font-size: 1.75rem !important; }
+            .text-3xl { font-size: 1.5rem !important; }
+            .text-2xl { font-size: 1.25rem !important; }
+            .text-xl { font-size: 1.125rem !important; }
+            
+            .grid { 
+                grid-template-columns: 1fr !important;
+                gap: 12px !important;
+            }
+            
+            .flex-col-mobile {
+                flex-direction: column !important;
+            }
+            
+            .w-40 {
+                width: 80px !important;
+                height: 80px !important;
+            }
+            
+            .p-16 { padding: 24px !important; }
+            .p-12 { padding: 20px !important; }
+            .p-10 { padding: 20px !important; }
+            .p-8 { padding: 16px !important; }
+            .p-6 { padding: 12px !important; }
+            
+            .mb-12 { margin-bottom: 24px !important; }
+            .mb-8 { margin-bottom: 16px !important; }
+            .mb-6 { margin-bottom: 12px !important; }
+            
+            .gap-8 { gap: 16px !important; }
+            .gap-6 { gap: 12px !important; }
+            
+            .rounded-3xl { border-radius: 16px !important; }
+            .rounded-2xl { border-radius: 12px !important; }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-btn span.text-2xl,
+            .nav-btn span.text-xl {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body class="gradient-bg">
@@ -200,7 +297,7 @@
                             <div class="w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white text-3xl font-bold flex-shrink-0 shine">1</div>
                             <div class="flex-1">
                                 <h3 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                                    <span class="text-3xl">🏦</span>
+                                    <i data-lucide="database" class="text-green-600" style="width: 32px; height: 32px;"></i>
                                     Brazilian Fixed Income Assets
                                 </h3>
                                 <div class="grid md:grid-cols-2 gap-4">
@@ -226,7 +323,7 @@
                             <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-3xl font-bold flex-shrink-0 shine">2</div>
                             <div class="flex-1">
                                 <h3 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                                    <span class="text-3xl">🛡️</span>
+                                    <i data-lucide="shield" class="text-blue-600" style="width: 32px; height: 32px;"></i>
                                     SPV Acquisition & Protection
                                 </h3>
                                 <div class="grid md:grid-cols-2 gap-3 text-slate-700">
@@ -267,22 +364,28 @@
                             <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white text-3xl font-bold flex-shrink-0 shine">3</div>
                             <div class="flex-1">
                                 <h3 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                                    <span class="text-3xl">🪙</span>
+                                    <i data-lucide="coins" class="text-purple-600" style="width: 32px; height: 32px;"></i>
                                     ERC-4626 Tokenization
                                 </h3>
                                 <div class="grid md:grid-cols-3 gap-4">
                                     <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 text-center border-2 border-purple-200">
-                                        <div class="text-4xl mb-3">🔒</div>
+                                        <div class="flex justify-center mb-3">
+                                            <i data-lucide="lock" class="text-purple-600" style="width: 40px; height: 40px;"></i>
+                                        </div>
                                         <div class="font-bold text-purple-900">1:1 Backing</div>
                                         <div class="text-xs text-slate-600 mt-2">Every token = R$1 asset</div>
                                     </div>
                                     <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 text-center border-2 border-purple-200">
-                                        <div class="text-4xl mb-3">⚙️</div>
+                                        <div class="flex justify-center mb-3">
+                                            <i data-lucide="coins" class="text-purple-600" style="width: 40px; height: 40px;"></i>
+                                        </div>
                                         <div class="font-bold text-purple-900">ERC-4626</div>
                                         <div class="text-xs text-slate-600 mt-2">DeFi standard vault</div>
                                     </div>
                                     <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 text-center border-2 border-purple-200">
-                                        <div class="text-4xl mb-3">⚡</div>
+                                        <div class="flex justify-center mb-3">
+                                            <i data-lucide="zap" class="text-purple-600" style="width: 40px; height: 40px;"></i>
+                                        </div>
                                         <div class="font-bold text-purple-900">Instant</div>
                                         <div class="text-xs text-slate-600 mt-2">Real-time minting</div>
                                     </div>
@@ -298,7 +401,7 @@
                             <div class="w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white text-3xl font-bold flex-shrink-0 shine">4</div>
                             <div class="flex-1">
                                 <h3 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                                    <span class="text-3xl">🔗</span>
+                                    <i data-lucide="trending-up" class="text-orange-600" style="width: 32px; height: 32px;"></i>
                                     Chainlink Proof-of-Reserve
                                 </h3>
                                 <div class="grid md:grid-cols-3 gap-4">
@@ -326,7 +429,7 @@
                             <div class="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center text-white text-3xl font-bold flex-shrink-0 shine">5</div>
                             <div class="flex-1">
                                 <h3 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                                    <span class="text-3xl">🌍</span>
+                                    <i data-lucide="globe" class="text-indigo-600" style="width: 32px; height: 32px;"></i>
                                     Global Investor Access
                                 </h3>
                                 <div class="grid md:grid-cols-4 gap-3">
@@ -363,21 +466,27 @@
                 
                 <div class="grid md:grid-cols-3 gap-6 mb-12">
                     <div class="glass-card rounded-3xl p-8 text-center stat-card animate-fade-in-scale delay-1 shine">
-                        <div class="text-6xl mb-4">👥</div>
+                        <div class="flex justify-center mb-4">
+                            <i data-lucide="users" class="text-blue-600" style="width: 64px; height: 64px;"></i>
+                        </div>
                         <div class="text-6xl font-black bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent counter mb-3">5M+</div>
                         <h3 class="text-2xl font-bold text-slate-900 mb-2">Brazilians Abroad</h3>
                         <p class="text-slate-600">Living overseas seeking investment opportunities</p>
                     </div>
                     
                     <div class="glass-card rounded-3xl p-8 text-center stat-card animate-fade-in-scale delay-2 shine">
-                        <div class="text-6xl mb-4">💰</div>
+                        <div class="flex justify-center mb-4">
+                            <i data-lucide="dollar-sign" class="text-green-600" style="width: 64px; height: 64px;"></i>
+                        </div>
                         <div class="text-6xl font-black bg-gradient-to-r from-green-600 to-emerald-400 bg-clip-text text-transparent counter mb-3">€17B</div>
                         <h3 class="text-2xl font-bold text-slate-900 mb-2">Savings Pool</h3>
                         <p class="text-slate-600">Total estimated expatriate capital</p>
                     </div>
                     
                     <div class="glass-card rounded-3xl p-8 text-center stat-card animate-fade-in-scale delay-3 shine">
-                        <div class="text-6xl mb-4">📈</div>
+                        <div class="flex justify-center mb-4">
+                            <i data-lucide="trending-up" class="text-purple-600" style="width: 64px; height: 64px;"></i>
+                        </div>
                         <div class="text-6xl font-black bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent counter mb-3">11%</div>
                         <h3 class="text-2xl font-bold text-slate-900 mb-2">Selic Rate</h3>
                         <p class="text-slate-600">Highest real rate among G20 nations</p>
@@ -404,7 +513,7 @@
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="glass-card rounded-3xl p-8 animate-fade-in-up delay-1">
                         <h3 class="text-3xl font-bold text-blue-600 mb-6 flex items-center gap-3">
-                            <span class="text-4xl">🎯</span>
+                            <i data-lucide="target" class="text-blue-600" style="width: 40px; height: 40px;"></i>
                             Primary Target (Phase 1)
                         </h3>
                         <div class="space-y-4">
@@ -442,7 +551,7 @@
                     
                     <div class="glass-card rounded-3xl p-8 animate-fade-in-up delay-2">
                         <h3 class="text-3xl font-bold text-green-600 mb-6 flex items-center gap-3">
-                            <span class="text-4xl">🚀</span>
+                            <i data-lucide="rocket" class="text-green-600" style="width: 40px; height: 40px;"></i>
                             Secondary Target (Phase 2)
                         </h3>
                         <div class="space-y-4">
@@ -486,7 +595,7 @@
                     <div class="glass-card rounded-3xl p-8 border-t-8 border-blue-500 stat-card animate-fade-in-scale delay-1">
                         <div class="flex justify-between items-start mb-6">
                             <h3 class="text-xl font-bold text-slate-900">Management Fee</h3>
-                            <span class="text-5xl">📊</span>
+                            <i data-lucide="bar-chart-3" class="text-blue-600" style="width: 48px; height: 48px;"></i>
                         </div>
                         <div class="text-7xl font-black text-blue-600 counter mb-3">0.5%</div>
                         <div class="text-slate-600 mb-6">Annual fee on assets under management</div>
@@ -499,7 +608,7 @@
                     <div class="glass-card rounded-3xl p-8 border-t-8 border-green-500 stat-card animate-fade-in-scale delay-2">
                         <div class="flex justify-between items-start mb-6">
                             <h3 class="text-xl font-bold text-slate-900">FX/Stable Spread</h3>
-                            <span class="text-5xl">💵</span>
+                            <i data-lucide="dollar-sign" class="text-green-600" style="width: 48px; height: 48px;"></i>
                         </div>
                         <div class="text-7xl font-black text-green-600 counter mb-3">0.2%</div>
                         <div class="text-slate-600 mb-6">Conversion fee between currencies</div>
@@ -512,7 +621,7 @@
                     <div class="glass-card rounded-3xl p-8 border-t-8 border-purple-500 stat-card animate-fade-in-scale delay-3">
                         <div class="flex justify-between items-start mb-6">
                             <h3 class="text-xl font-bold text-slate-900">Additional Revenue</h3>
-                            <span class="text-5xl">📈</span>
+                            <i data-lucide="trending-up" class="text-purple-600" style="width: 48px; height: 48px;"></i>
                         </div>
                         <div class="text-7xl font-black text-purple-600 counter mb-3">+</div>
                         <div class="text-slate-600 mb-6">LP fees, DeFi integrations, B2B</div>
@@ -556,7 +665,7 @@
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="glass-card rounded-3xl p-8 animate-fade-in-up delay-1">
                         <h3 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="text-4xl">🎯</span>
+                            <i data-lucide="target" class="text-blue-600" style="width: 40px; height: 40px;"></i>
                             Break-even Target
                         </h3>
                         <div class="space-y-4">
@@ -583,26 +692,26 @@
 
                     <div class="glass-card rounded-3xl p-8 animate-fade-in-up delay-2">
                         <h3 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="text-4xl">⚡</span>
+                            <i data-lucide="zap" class="text-green-600" style="width: 40px; height: 40px;"></i>
                             Operational Efficiency
                         </h3>
                         <div class="space-y-6">
                             <div class="flex items-start gap-4">
-                                <span class="text-3xl text-green-600">✓</span>
+                                <i data-lucide="check-circle" class="text-green-600 flex-shrink-0" style="width: 28px; height: 28px;"></i>
                                 <div>
                                     <div class="font-bold text-slate-900 text-lg mb-1">Cost Advantage</div>
                                     <div class="text-slate-600">40-60% lower than EU/US operations</div>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
-                                <span class="text-3xl text-green-600">✓</span>
+                                <i data-lucide="check-circle" class="text-green-600 flex-shrink-0" style="width: 28px; height: 28px;"></i>
                                 <div>
                                     <div class="font-bold text-slate-900 text-lg mb-1">BaaS Partnerships</div>
                                     <div class="text-slate-600">Reduced infrastructure costs</div>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
-                                <span class="text-3xl text-green-600">✓</span>
+                                <i data-lucide="check-circle" class="text-green-600 flex-shrink-0" style="width: 28px; height: 28px;"></i>
                                 <div>
                                     <div class="font-bold text-slate-900 text-lg mb-1">Lean Structure</div>
                                     <div class="text-slate-600">Technology-first approach</div>
@@ -624,7 +733,7 @@
                 <div class="grid md:grid-cols-2 gap-6 mb-8">
                     <div class="glass-card rounded-3xl p-8 border-t-8 border-yellow-500 stat-card animate-fade-in-scale delay-1">
                         <div class="flex items-center gap-4 mb-6">
-                            <span class="text-5xl">🏆</span>
+                            <i data-lucide="award" class="text-yellow-600" style="width: 48px; height: 48px;"></i>
                             <h3 class="text-3xl font-bold text-slate-900">First-Mover</h3>
                         </div>
                         <p class="text-slate-700 mb-6 text-lg">First Brazilian fixed income token combining Proof-of-Reserve with full regulatory compliance</p>
@@ -646,7 +755,7 @@
 
                     <div class="glass-card rounded-3xl p-8 border-t-8 border-green-500 stat-card animate-fade-in-scale delay-2">
                         <div class="flex items-center gap-4 mb-6">
-                            <span class="text-5xl">📈</span>
+                            <i data-lucide="trending-up" class="text-green-600" style="width: 48px; height: 48px;"></i>
                             <h3 class="text-3xl font-bold text-slate-900">Superior Yield</h3>
                         </div>
                         <p class="text-slate-700 mb-6 text-lg">Net yield exceeding 10% p.a. in hard currency - significantly outperforming alternatives</p>
@@ -674,7 +783,7 @@
 
                     <div class="glass-card rounded-3xl p-8 border-t-8 border-blue-500 stat-card animate-fade-in-scale delay-3">
                         <div class="flex items-center gap-4 mb-6">
-                            <span class="text-5xl">💰</span>
+                            <i data-lucide="dollar-sign" class="text-blue-600" style="width: 48px; height: 48px;"></i>
                             <h3 class="text-3xl font-bold text-slate-900">Cost Leadership</h3>
                         </div>
                         <p class="text-slate-700 mb-6 text-lg">Operational efficiencies translate to lower costs and higher margins</p>
@@ -696,7 +805,7 @@
 
                     <div class="glass-card rounded-3xl p-8 border-t-8 border-purple-500 stat-card animate-fade-in-scale delay-4">
                         <div class="flex items-center gap-4 mb-6">
-                            <span class="text-5xl">⚡</span>
+                            <i data-lucide="zap" class="text-purple-600" style="width: 48px; height: 48px;"></i>
                             <h3 class="text-3xl font-bold text-slate-900">White-Label Protocol</h3>
                         </div>
                         <p class="text-slate-700 mb-6 text-lg">Scalable B2B infrastructure for wallets and exchanges</p>
@@ -723,22 +832,30 @@
                         <h3 class="text-3xl font-bold text-white mb-8 text-center">Competitive Moat</h3>
                         <div class="grid md:grid-cols-4 gap-6 text-center text-white">
                             <div>
-                                <div class="text-5xl mb-3">🛡️</div>
+                                <div class="flex justify-center mb-3">
+                                    <i data-lucide="shield" class="text-blue-300" style="width: 48px; height: 48px;"></i>
+                                </div>
                                 <div class="font-bold text-xl mb-2">Regulatory</div>
                                 <div class="text-slate-300 text-sm">CVM & BACEN aligned</div>
                             </div>
                             <div>
-                                <div class="text-5xl mb-3">🔒</div>
+                                <div class="flex justify-center mb-3">
+                                    <i data-lucide="lock" class="text-green-300" style="width: 48px; height: 48px;"></i>
+                                </div>
                                 <div class="font-bold text-xl mb-2">Bank Partners</div>
                                 <div class="text-slate-300 text-sm">Exclusive relationships</div>
                             </div>
                             <div>
-                                <div class="text-5xl mb-3">✅</div>
+                                <div class="flex justify-center mb-3">
+                                    <i data-lucide="check-circle" class="text-orange-300" style="width: 48px; height: 48px;"></i>
+                                </div>
                                 <div class="font-bold text-xl mb-2">Technology</div>
                                 <div class="text-slate-300 text-sm">Chainlink PoR integration</div>
                             </div>
                             <div>
-                                <div class="text-5xl mb-3">👥</div>
+                                <div class="flex justify-center mb-3">
+                                    <i data-lucide="users" class="text-purple-300" style="width: 48px; height: 48px;"></i>
+                                </div>
                                 <div class="font-bold text-xl mb-2">Network</div>
                                 <div class="text-slate-300 text-sm">First-mover advantage</div>
                             </div>
@@ -766,7 +883,7 @@
                             <h3 class="text-4xl font-black text-slate-900 mb-2">Rodrigo Serviuc Pavezi</h3>
                             <p class="text-2xl text-blue-600 font-bold mb-4">Founder & CEO</p>
                             <a href="https://www.linkedin.com/in/rodrigopavezi/" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all font-semibold shadow-lg hover:shadow-xl hover:scale-105">
-                                <span class="text-xl">🌐</span>
+                                <i data-lucide="linkedin" style="width: 20px; height: 20px;"></i>
                                 LinkedIn Profile
                             </a>
                         </div>
@@ -774,7 +891,7 @@
                     
                     <div class="bg-gradient-to-br from-blue-50 to-cyan-100 rounded-2xl p-8 mb-6 border-2 border-blue-200">
                         <h4 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                            <span class="text-3xl">🏆</span>
+                            <i data-lucide="award" class="text-blue-600" style="width: 32px; height: 32px;"></i>
                             Experience & Expertise
                         </h4>
                         <p class="text-slate-700 text-lg leading-relaxed">
@@ -824,11 +941,11 @@
                             <p class="text-lg text-slate-600 mb-4">CEO at Sonica</p>
                             <div class="flex gap-3">
                                 <a href="https://sonica.xyz/" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all font-semibold shadow-lg hover:shadow-xl hover:scale-105">
-                                    <span class="text-xl">🌐</span>
+                                    <i data-lucide="globe" style="width: 20px; height: 20px;"></i>
                                     Sonica.xyz
                                 </a>
                                 <a href="https://www.linkedin.com/in/alexandreadoglio/" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all font-semibold shadow-lg hover:shadow-xl hover:scale-105">
-                                    <span class="text-xl">🌐</span>
+                                    <i data-lucide="linkedin" style="width: 20px; height: 20px;"></i>
                                     LinkedIn
                                 </a>
                             </div>
@@ -837,7 +954,7 @@
                     
                     <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 mb-6 border-2 border-green-200">
                         <h4 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                            <span class="text-3xl">🏆</span>
+                            <i data-lucide="award" class="text-green-600" style="width: 32px; height: 32px;"></i>
                             Experience & Expertise
                         </h4>
                         <p class="text-slate-700 text-lg leading-relaxed">
@@ -879,23 +996,33 @@
                     <div class="relative z-10">
                         <div class="grid grid-cols-5 gap-6">
                             <div class="bg-white bg-opacity-90 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all hover:scale-105">
-                                <div class="text-5xl mb-4">🛡️</div>
+                                <div class="flex justify-center mb-4">
+                                    <i data-lucide="shield" class="text-blue-600" style="width: 48px; height: 48px;"></i>
+                                </div>
                                 <div class="font-bold text-slate-900 text-lg">Blockchain Architecture</div>
                             </div>
                             <div class="bg-white bg-opacity-90 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all hover:scale-105">
-                                <div class="text-5xl mb-4">📈</div>
+                                <div class="flex justify-center mb-4">
+                                    <i data-lucide="trending-up" class="text-green-600" style="width: 48px; height: 48px;"></i>
+                                </div>
                                 <div class="font-bold text-slate-900 text-lg">Marketing & Growth</div>
                             </div>
                             <div class="bg-white bg-opacity-90 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all hover:scale-105">
-                                <div class="text-5xl mb-4">🪙</div>
+                                <div class="flex justify-center mb-4">
+                                    <i data-lucide="coins" class="text-purple-600" style="width: 48px; height: 48px;"></i>
+                                </div>
                                 <div class="font-bold text-slate-900 text-lg">Asset Tokenization</div>
                             </div>
                             <div class="bg-white bg-opacity-90 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all hover:scale-105">
-                                <div class="text-5xl mb-4">💰</div>
+                                <div class="flex justify-center mb-4">
+                                    <i data-lucide="dollar-sign" class="text-orange-600" style="width: 48px; height: 48px;"></i>
+                                </div>
                                 <div class="font-bold text-slate-900 text-lg">DeFi Expertise</div>
                             </div>
                             <div class="bg-white bg-opacity-90 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all hover:scale-105">
-                                <div class="text-5xl mb-4">⚡</div>
+                                <div class="flex justify-center mb-4">
+                                    <i data-lucide="zap" class="text-indigo-600" style="width: 48px; height: 48px;"></i>
+                                </div>
                                 <div class="font-bold text-slate-900 text-lg">Product Leadership</div>
                             </div>
                         </div>
@@ -1057,15 +1184,15 @@
                         <div class="glass-card flex-1 rounded-2xl p-6 shadow-lg">
                             <div class="space-y-3">
                                 <div class="flex items-center gap-3 text-slate-800 font-medium">
-                                    <span class="text-2xl text-green-600">✅</span>
+                                    <i data-lucide="check-circle-2" class="text-green-600" style="width: 24px; height: 24px;"></i>
                                     <span>Legal SPV establishment</span>
                                 </div>
                                 <div class="flex items-center gap-3 text-slate-800 font-medium">
-                                    <span class="text-2xl text-green-600">✅</span>
+                                    <i data-lucide="check-circle-2" class="text-green-600" style="width: 24px; height: 24px;"></i>
                                     <span>Live Proof-of-Reserve implementation</span>
                                 </div>
                                 <div class="flex items-center gap-3 text-slate-800 font-medium">
-                                    <span class="text-2xl text-green-600">✅</span>
+                                    <i data-lucide="check-circle-2" class="text-green-600" style="width: 24px; height: 24px;"></i>
                                     <span>Initial bank pilot programs</span>
                                 </div>
                             </div>
@@ -1079,15 +1206,15 @@
                         <div class="glass-card flex-1 rounded-2xl p-6 shadow-lg">
                             <div class="space-y-3">
                                 <div class="flex items-center gap-3 text-slate-800 font-medium">
-                                    <span class="text-2xl text-green-600">✅</span>
+                                    <i data-lucide="check-circle-2" class="text-green-600" style="width: 24px; height: 24px;"></i>
                                     <span>Public launch of brRWA platform</span>
                                 </div>
                                 <div class="flex items-center gap-3 text-slate-800 font-medium">
-                                    <span class="text-2xl text-green-600">✅</span>
+                                    <i data-lucide="check-circle-2" class="text-green-600" style="width: 24px; height: 24px;"></i>
                                     <span>Marketing campaign in European markets</span>
                                 </div>
                                 <div class="flex items-center gap-3 text-slate-800 font-medium">
-                                    <span class="text-2xl text-green-600">✅</span>
+                                    <i data-lucide="check-circle-2" class="text-green-600" style="width: 24px; height: 24px;"></i>
                                     <span>Community building initiatives</span>
                                 </div>
                             </div>
@@ -1101,15 +1228,15 @@
                         <div class="glass-card flex-1 rounded-2xl p-6 shadow-lg">
                             <div class="space-y-3">
                                 <div class="flex items-center gap-3 text-slate-800 font-medium">
-                                    <span class="text-2xl text-purple-600">✅</span>
+                                    <i data-lucide="check-circle-2" class="text-purple-600" style="width: 24px; height: 24px;"></i>
                                     <span>DeFi protocol integrations</span>
                                 </div>
                                 <div class="flex items-center gap-3 text-slate-800 font-medium">
-                                    <span class="text-2xl text-purple-600">✅</span>
+                                    <i data-lucide="check-circle-2" class="text-purple-600" style="width: 24px; height: 24px;"></i>
                                     <span>Enhanced liquidity options</span>
                                 </div>
                                 <div class="flex items-center gap-3 text-slate-800 font-medium">
-                                    <span class="text-2xl text-purple-600">✅</span>
+                                    <i data-lucide="check-circle-2" class="text-purple-600" style="width: 24px; height: 24px;"></i>
                                     <span>Additional yield strategies</span>
                                 </div>
                             </div>
@@ -1123,15 +1250,15 @@
                         <div class="glass-card flex-1 rounded-2xl p-6 shadow-lg">
                             <div class="space-y-3">
                                 <div class="flex items-center gap-3 text-slate-800 font-medium">
-                                    <span class="text-2xl text-orange-600">✅</span>
+                                    <i data-lucide="check-circle-2" class="text-orange-600" style="width: 24px; height: 24px;"></i>
                                     <span>First B2B client onboarding</span>
                                 </div>
                                 <div class="flex items-center gap-3 text-slate-800 font-medium">
-                                    <span class="text-2xl text-orange-600">✅</span>
+                                    <i data-lucide="check-circle-2" class="text-orange-600" style="width: 24px; height: 24px;"></i>
                                     <span>White-label platform launches</span>
                                 </div>
                                 <div class="flex items-center gap-3 text-slate-800 font-medium">
-                                    <span class="text-2xl text-orange-600">✅</span>
+                                    <i data-lucide="check-circle-2" class="text-orange-600" style="width: 24px; height: 24px;"></i>
                                     <span>Expansion to US market</span>
                                 </div>
                             </div>
@@ -1186,15 +1313,15 @@
                 <h2 class="text-5xl font-bold text-blue-200 mb-12 animate-fade-in-up delay-1">Thank You</h2>
                 <div class="text-2xl text-slate-300 space-y-6 animate-fade-in-up delay-2">
                     <p class="flex items-center justify-center gap-3">
-                        <span class="text-4xl">👤</span>
+                        <i data-lucide="user" class="text-blue-300" style="width: 36px; height: 36px;"></i>
                         <span>Contact: Rodrigo Serviuc Pavezi</span>
                     </p>
                     <p class="flex items-center justify-center gap-3">
-                        <span class="text-4xl">📧</span>
+                        <i data-lucide="mail" class="text-blue-300" style="width: 36px; height: 36px;"></i>
                         <span>Contact for more information</span>
                     </p>
                     <p class="flex items-center justify-center gap-3">
-                        <span class="text-4xl">🌐</span>
+                        <i data-lucide="globe" class="text-blue-300" style="width: 36px; height: 36px;"></i>
                         <span>Bringing Brazilian Fixed Income to Global DeFi</span>
                     </p>
                 </div>
@@ -1204,10 +1331,12 @@
 
     <!-- Navigation Buttons -->
     <button class="nav-btn nav-prev" id="prevBtn" onclick="prevSlide()">
-        <span class="text-2xl">←</span> Previous
+        <i data-lucide="chevron-left" style="width: 20px; height: 20px;"></i>
+        <span>Previous</span>
     </button>
     <button class="nav-btn nav-next" id="nextBtn" onclick="nextSlide()">
-        Next <span class="text-2xl">→</span>
+        <span>Next</span>
+        <i data-lucide="chevron-right" style="width: 20px; height: 20px;"></i>
     </button>
 
     <script>
@@ -1254,6 +1383,9 @@
 
         // Initialize
         updateSlides();
+        
+        // Initialize Lucide icons
+        lucide.createIcons();
     </script>
 </body>
 </html>
