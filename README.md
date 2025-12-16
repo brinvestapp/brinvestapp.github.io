@@ -14,7 +14,7 @@ brRWA brings Brazilian fixed income assets to global investors through blockchai
 - **11%+ Annual Yields** on government-backed assets
 - **ERC-4626 Standard** for DeFi compatibility
 - **Chainlink Proof-of-Reserve** for transparency
-- **€50 Minimum Investment** for accessibility
+- **$50 Minimum Investment** for accessibility
 
 ## 🚀 Features
 
