@@ -6,7 +6,7 @@ Landing page para o brinvest, um app mobile que permite brasileiros no exterior 
 
 ## 🌐 Site
 
-Acesse: [brinvest.xyz](https://brinvest.xyz)
+Acesse: [brinvest.app](https://brinvest.app)
 
 ## 📊 Sobre o brinvest
 
