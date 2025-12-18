@@ -13,7 +13,6 @@ Acesse: [brinvest.xyz](https://brinvest.xyz)
 O brinvest permite que brasileiros no mundo todo invistam em fundos brasileiros:
 - **11%+ Rendimento Anual** próximo à SELIC, uma das taxas mais altas do mundo
 - **Depósitos em EUR/USD** com conversão automática
-- **Token TESOURO** (stablebond) lastreado por ativos brasileiros
 - **$50 Investimento Mínimo** para acessibilidade
 - **Resgates via PIX** ou transferência bancária
 
