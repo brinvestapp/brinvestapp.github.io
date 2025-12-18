@@ -1,56 +1,38 @@
-# brRWA - Brazilian Fixed Income RWA Presentation
+# brinvest - Invista em Fundos Brasileiros de Qualquer Lugar
 
-**Global Access to Brazilian Fixed Income**
+**Acesso Global a Fundos Brasileiros de Alta Rentabilidade**
 
-This repository contains the investor presentation for brRWA, a platform tokenizing Brazil's high-yield fixed income for global investors.
+Landing page para o brinvest, um app mobile que permite brasileiros no exterior investirem em fundos brasileiros lastreados por ativos reais.
 
-## 🌐 Live Presentation
+## 🌐 Site
 
-Visit the live presentation at: `https://[your-username].github.io/brRWA/`
+Acesse: [brinvest.xyz](https://brinvest.xyz)
 
-## 📊 About brRWA
+## 📊 Sobre o brinvest
 
-brRWA brings Brazilian fixed income assets to global investors through blockchain tokenization, offering:
-- **11%+ Annual Yields** on government-backed assets
-- **ERC-4626 Standard** for DeFi compatibility
-- **Chainlink Proof-of-Reserve** for transparency
-- **$50 Minimum Investment** for accessibility
+O brinvest permite que brasileiros no mundo todo invistam em fundos brasileiros:
+- **11%+ Rendimento Anual** próximo à SELIC, uma das taxas mais altas do mundo
+- **Depósitos em EUR/USD** com conversão automática
+- **Token TESOURO** (stablebond) lastreado por ativos brasileiros
+- **$50 Investimento Mínimo** para acessibilidade
+- **Resgates via PIX** ou transferência bancária
 
-## 🚀 Features
+## 🚀 Funcionalidades da Landing Page
 
-- Modern, animated presentation built with Tailwind CSS
-- 15 comprehensive slides covering:
-  - Solution Architecture
-  - Market Opportunity
-  - Business Model
-  - Competitive Advantages
-  - Team Profiles
-  - Growth Strategy
-  - Roadmap & Investment Opportunity
+- Design moderno com Tailwind CSS
+- Mockup interativo do app mobile
+- Animações de scroll reveal
+- Modal de captura de email para lista de espera
+- Totalmente responsivo
 
-## 📖 How to Navigate
+## 🛠️ Desenvolvimento Local
 
-- Use **arrow keys** (← →) or **spacebar** to navigate
-- Click the **navigation buttons** at the bottom
-- Press **ESC** for overview mode (if available)
-
-## 🛠️ Local Development
-
-To view locally:
-1. Clone this repository
-2. Open `index.html` in any modern web browser
-3. No build process required!
-
-## 📧 Contact
-
-**Rodrigo Serviuc Pavezi** - Founder & CEO
-- LinkedIn: [linkedin.com/in/rodrigopavezi](https://www.linkedin.com/in/rodrigopavezi/)
-
-**Alexandre Adoglio** - Strategic Advisor, CEO at Sonica
-- Website: [sonica.xyz](https://sonica.xyz/)
-- LinkedIn: [linkedin.com/in/alexandreadoglio](https://www.linkedin.com/in/alexandreadoglio/)
+Para visualizar localmente:
+1. Clone este repositório
+2. Abra `index.html` em qualquer navegador moderno
+3. Nenhum processo de build necessário!
 
 ---
 
-© 2025 brRWA - Bringing Brazilian Fixed Income to Global DeFi
+© 2025 brinvest
 
