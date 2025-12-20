@@ -1,8 +1,8 @@
-# brinvest - Invista em Fundos Brasileiros de Qualquer Lugar
+# brinvest - Invista em Fundos Brasileiros com Rendimento Próximo à SELIC
 
-**Acesso Global a Fundos Brasileiros de Alta Rentabilidade**
+**Invista BRL em Fundos Brasileiros de Alta Rentabilidade**
 
-Landing page para o brinvest, um app mobile que permite brasileiros no exterior investirem em fundos brasileiros lastreados por ativos reais.
+Landing page para o brinvest, um app mobile que permite investir BRL em fundos brasileiros com rendimento próximo à SELIC.
 
 ## 🌐 Site
 
@@ -10,11 +10,11 @@ Acesse: [brinvest.xyz](https://brinvest.xyz)
 
 ## 📊 Sobre o brinvest
 
-O brinvest permite que brasileiros no mundo todo invistam em fundos brasileiros:
+O brinvest permite que você invista em fundos brasileiros com alta rentabilidade:
 - **11%+ Rendimento Anual** próximo à SELIC, uma das taxas mais altas do mundo
-- **Depósitos em EUR/USD** com conversão automática
-- **Token TESOURO** (stablebond) lastreado por ativos brasileiros
-- **$50 Investimento Mínimo** para acessibilidade
+- **Depósitos em BRL** via PIX ou transferência bancária
+- **Token brFUND** com rendimento próximo à SELIC
+- **R$50 Investimento Mínimo** para acessibilidade
 - **Resgates via PIX** ou transferência bancária
 
 ## 🚀 Funcionalidades da Landing Page
