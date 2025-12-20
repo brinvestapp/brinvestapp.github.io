@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Serviço - brinvest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#3D5A58',
+                            dark: '#2D4544',
+                            darker: '#1E3332',
+                            pink: '#f6c9c5',
+                            cream: '#f1e8e8',
+                            muted: '#a8c0bf'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        * { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        body {
+            background: #3D5A58;
+            color: #f1e8e8;
+        }
+        
+        .text-muted { color: #a8c0bf; }
+        .bg-card { background: #2D4544; }
+        .border-subtle { border-color: #4a6b69; }
+        
+        .btn-primary {
+            background: #f6c9c5;
+            color: #2D4544;
+            transition: all 0.2s ease;
+        }
+        .btn-primary:hover {
+            background: #f1e8e8;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px -10px rgba(246, 201, 197, 0.4);
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+    
+    <!-- Nav -->
+    <nav class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="logo.svg" alt="brinvest" class="h-24">
+        </a>
+        <a href="index.html" class="btn-primary px-5 py-2.5 rounded-full text-sm font-medium">
+            Voltar ao início
+        </a>
+    </nav>
+
+    <!-- Content -->
+    <section class="max-w-4xl mx-auto px-6 py-16">
+        <h1 class="text-4xl md:text-5xl font-bold mb-8">Termos de Serviço</h1>
+        <p class="text-muted mb-8">Última atualização: 20 de dezembro de 2025</p>
+        
+        <div class="space-y-8">
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">1. Aceitação dos Termos</h2>
+                <p class="text-muted leading-relaxed">
+                    Ao acessar ou usar o aplicativo e a plataforma brinvest ("Serviço"), você concorda em ficar vinculado a estes Termos de Serviço ("Termos"). Se você não concordar com estes Termos, não utilize nosso Serviço. Estes Termos constituem um acordo legal entre você e a brinvest.
+                </p>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">2. Descrição do Serviço</h2>
+                <p class="text-muted leading-relaxed mb-4">
+                    A brinvest é uma plataforma <strong class="text-brand-cream">100% descentralizada</strong> que opera em DeFi (Finanças Descentralizadas) com modelo <strong class="text-brand-cream">self-custody</strong>. Nossos serviços incluem:
+                </p>
+                <ul class="list-disc list-inside text-muted space-y-2">
+                    <li>Interface para interação com protocolos DeFi</li>
+                    <li>Aquisição de tokens brFUND lastreados em fundos brasileiros</li>
+                    <li>Acompanhamento de rendimentos e portfólio on-chain</li>
+                    <li>Integração com serviços de on/off ramp (via BlindPay) para conversão BRL ↔ crypto</li>
+                </ul>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">3. Natureza Descentralizada e Self-Custody</h2>
+                <p class="text-muted leading-relaxed mb-4">
+                    <strong class="text-brand-cream">IMPORTANTE - LEIA COM ATENÇÃO:</strong>
+                </p>
+                <ul class="list-disc list-inside text-muted space-y-2">
+                    <li><strong class="text-brand-cream">Self-Custody:</strong> Você é o único responsável pela custódia dos seus ativos. Você controla suas próprias chaves privadas.</li>
+                    <li><strong class="text-brand-cream">Sem Intermediários:</strong> A brinvest não tem custódia, acesso ou controle sobre seus fundos.</li>
+                    <li><strong class="text-brand-cream">Responsabilidade:</strong> Se você perder suas chaves privadas ou seed phrase, perderá acesso aos seus fundos de forma irreversível. A brinvest não pode recuperar seus fundos.</li>
+                    <li><strong class="text-brand-cream">Transações Irreversíveis:</strong> Transações em blockchain são permanentes e não podem ser revertidas.</li>
+                </ul>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">4. Serviços de On/Off Ramp (BlindPay)</h2>
+                <p class="text-muted leading-relaxed mb-4">
+                    Para converter BRL em tokens e vice-versa, o Serviço integra com a <strong class="text-brand-cream">BlindPay</strong>, um provedor terceirizado de on/off ramp:
+                </p>
+                <ul class="list-disc list-inside text-muted space-y-2">
+                    <li><strong class="text-brand-cream">KYC Obrigatório:</strong> A BlindPay exige verificação de identidade (KYC) para cumprir regulamentações de AML/CFT</li>
+                    <li><strong class="text-brand-cream">Termos Separados:</strong> O uso dos serviços da BlindPay está sujeito aos termos e política de privacidade da própria BlindPay</li>
+                    <li><strong class="text-brand-cream">Coleta de Dados:</strong> A BlindPay coleta e processa seus dados pessoais. A brinvest não armazena esses dados</li>
+                    <li><strong class="text-brand-cream">Responsabilidade:</strong> A brinvest não é responsável pelos serviços prestados pela BlindPay</li>
+                </ul>
+                <p class="text-muted leading-relaxed mt-4">
+                    Consulte os <a href="https://blindpay.com/terms" target="_blank" rel="noopener noreferrer" class="text-brand-pink hover:underline">Termos de Serviço da BlindPay</a> para mais informações.
+                </p>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">5. Elegibilidade</h2>
+                <p class="text-muted leading-relaxed mb-4">Para usar nosso Serviço, você deve:</p>
+                <ul class="list-disc list-inside text-muted space-y-2">
+                    <li>Ter pelo menos 18 anos de idade</li>
+                    <li>Não estar sujeito a sanções econômicas ou restrições legais que impeçam o uso do Serviço</li>
+                    <li>Para utilizar o on/off ramp (BlindPay): completar o processo de KYC exigido pela BlindPay</li>
+                </ul>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">6. Tokens brFUND</h2>
+                <p class="text-muted leading-relaxed mb-4">
+                    Os tokens brFUND são representações digitais de cotas em fundos de investimento brasileiros. Ao adquirir tokens brFUND:
+                </p>
+                <ul class="list-disc list-inside text-muted space-y-2">
+                    <li>Você entende que o valor dos tokens pode variar de acordo com o desempenho do fundo subjacente</li>
+                    <li>Os rendimentos não são garantidos e dependem das condições de mercado</li>
+                    <li>Os tokens são mantidos em sua própria carteira (self-custody)</li>
+                    <li>Você é responsável pela segurança da sua carteira e chaves privadas</li>
+                </ul>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">7. Depósitos e Saques (via BlindPay)</h2>
+                <p class="text-muted leading-relaxed mb-4">
+                    Transações de on/off ramp são processadas pela BlindPay:
+                </p>
+                <ul class="list-disc list-inside text-muted space-y-2">
+                    <li><strong class="text-brand-cream">Depósitos:</strong> Conversão de BRL para tokens via PIX ou transferência bancária (processado pela BlindPay)</li>
+                    <li><strong class="text-brand-cream">Saques:</strong> Conversão de tokens para BRL, creditado em conta bancária (processado pela BlindPay)</li>
+                    <li><strong class="text-brand-cream">Taxas:</strong> Taxas de on/off ramp são definidas e cobradas pela BlindPay</li>
+                    <li><strong class="text-brand-cream">Limites:</strong> Limites de transação são definidos pela BlindPay de acordo com seu nível de verificação</li>
+                </ul>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">8. Riscos</h2>
+                <p class="text-muted leading-relaxed mb-4">
+                    <strong class="text-brand-cream">AVISO IMPORTANTE:</strong> O uso de DeFi e ativos digitais envolve riscos significativos:
+                </p>
+                <ul class="list-disc list-inside text-muted space-y-2">
+                    <li><strong class="text-brand-cream">Risco de Mercado:</strong> O valor dos investimentos pode diminuir assim como aumentar</li>
+                    <li><strong class="text-brand-cream">Risco de Smart Contract:</strong> Vulnerabilidades em smart contracts podem resultar em perda de fundos</li>
+                    <li><strong class="text-brand-cream">Risco de Custódia:</strong> Perda de chaves privadas significa perda irreversível de acesso aos fundos</li>
+                    <li><strong class="text-brand-cream">Risco Regulatório:</strong> Mudanças regulatórias podem afetar a disponibilidade ou funcionamento do serviço</li>
+                    <li><strong class="text-brand-cream">Risco Tecnológico:</strong> Falhas de blockchain, congestionamento de rede ou ataques podem afetar transações</li>
+                    <li><strong class="text-brand-cream">Você pode perder parte ou todo o capital investido</strong></li>
+                </ul>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">9. Propriedade Intelectual</h2>
+                <p class="text-muted leading-relaxed">
+                    Todo o conteúdo, marcas, logos, software e materiais disponibilizados através do Serviço são de propriedade da brinvest ou de seus licenciadores. Os smart contracts e protocolos DeFi utilizados são de código aberto e estão sujeitos às suas respectivas licenças.
+                </p>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">10. Condutas Proibidas</h2>
+                <p class="text-muted leading-relaxed mb-4">Ao usar nosso Serviço, você concorda em NÃO:</p>
+                <ul class="list-disc list-inside text-muted space-y-2">
+                    <li>Usar o Serviço para atividades ilegais, fraudulentas ou lavagem de dinheiro</li>
+                    <li>Tentar explorar vulnerabilidades em smart contracts ou no aplicativo</li>
+                    <li>Interferir na segurança ou funcionamento do Serviço</li>
+                    <li>Usar bots, scrapers ou outras ferramentas automatizadas de forma maliciosa</li>
+                    <li>Violar direitos de propriedade intelectual</li>
+                </ul>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">11. Limitação de Responsabilidade</h2>
+                <p class="text-muted leading-relaxed mb-4">
+                    <strong class="text-brand-cream">IMPORTANTE:</strong> A brinvest fornece uma interface para interação com protocolos DeFi. Na extensão máxima permitida por lei:
+                </p>
+                <ul class="list-disc list-inside text-muted space-y-2">
+                    <li>A brinvest não é responsável por perdas decorrentes do uso de protocolos DeFi</li>
+                    <li>A brinvest não é responsável por perdas de chaves privadas ou acesso à carteira</li>
+                    <li>A brinvest não é responsável por vulnerabilidades em smart contracts</li>
+                    <li>A brinvest não é responsável pelos serviços prestados pela BlindPay</li>
+                    <li>O Serviço é fornecido "como está", sem garantias de qualquer tipo</li>
+                </ul>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">12. Indenização</h2>
+                <p class="text-muted leading-relaxed">
+                    Você concorda em indenizar e isentar a brinvest, seus diretores, funcionários e parceiros de quaisquer reclamações, perdas, danos, custos e despesas decorrentes de: (a) seu uso do Serviço; (b) violação destes Termos; (c) perda de acesso às suas chaves privadas; (d) violação de direitos de terceiros.
+                </p>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">13. Modificações dos Termos</h2>
+                <p class="text-muted leading-relaxed">
+                    Podemos modificar estes Termos a qualquer momento. Alterações significativas serão comunicadas através do aplicativo. O uso continuado do Serviço após as modificações constitui aceitação dos novos Termos.
+                </p>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">14. Descontinuação do Serviço</h2>
+                <p class="text-muted leading-relaxed">
+                    A brinvest pode descontinuar ou modificar o Serviço a qualquer momento. Como seus ativos estão em self-custody, você mantém acesso aos seus tokens mesmo se o aplicativo for descontinuado, podendo interagir diretamente com os smart contracts ou usar outras interfaces.
+                </p>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">15. Lei Aplicável e Jurisdição</h2>
+                <p class="text-muted leading-relaxed">
+                    Estes Termos são regidos pelas leis da República Federativa do Brasil. Qualquer disputa relacionada a estes Termos será submetida à jurisdição exclusiva dos tribunais da cidade de São Paulo, Estado de São Paulo, Brasil.
+                </p>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">16. Disposições Gerais</h2>
+                <ul class="list-disc list-inside text-muted space-y-2">
+                    <li><strong class="text-brand-cream">Acordo Integral:</strong> Estes Termos constituem o acordo integral entre você e a brinvest.</li>
+                    <li><strong class="text-brand-cream">Renúncia:</strong> A falha em exercer qualquer direito não constitui renúncia desse direito.</li>
+                    <li><strong class="text-brand-cream">Divisibilidade:</strong> Se qualquer disposição for considerada inválida, as demais permanecerão em vigor.</li>
+                    <li><strong class="text-brand-cream">Cessão:</strong> Você não pode ceder ou transferir seus direitos sob estes Termos sem nosso consentimento.</li>
+                </ul>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">17. Contato</h2>
+                <p class="text-muted leading-relaxed">
+                    Se você tiver dúvidas sobre estes Termos de Serviço, entre em contato conosco:
+                </p>
+                <div class="mt-4 space-y-2 text-muted">
+                    <p><strong class="text-brand-cream">E-mail:</strong> <a href="mailto:legal@brinvest.app" class="text-brand-pink hover:underline">legal@brinvest.app</a></p>
+                    <p><strong class="text-brand-cream">Suporte:</strong> <a href="mailto:support@brinvest.app" class="text-brand-pink hover:underline">support@brinvest.app</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-subtle">
+        <div class="max-w-6xl mx-auto px-6 py-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="logo.svg" alt="brinvest" class="h-24">
+                </a>
+                <div class="flex gap-8 text-sm text-muted">
+                    <a href="privacy.html" class="hover:text-brand-cream transition-colors">Privacidade</a>
+                    <a href="terms.html" class="text-brand-cream">Termos</a>
+                    <a href="mailto:support@brinvest.app" class="hover:text-brand-cream transition-colors">support@brinvest.app</a>
+                </div>
+                <div class="text-sm text-muted">© 2025 brinvest</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

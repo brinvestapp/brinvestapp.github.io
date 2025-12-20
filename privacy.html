@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - brinvest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#3D5A58',
+                            dark: '#2D4544',
+                            darker: '#1E3332',
+                            pink: '#f6c9c5',
+                            cream: '#f1e8e8',
+                            muted: '#a8c0bf'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        * { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        body {
+            background: #3D5A58;
+            color: #f1e8e8;
+        }
+        
+        .text-muted { color: #a8c0bf; }
+        .bg-card { background: #2D4544; }
+        .border-subtle { border-color: #4a6b69; }
+        
+        .btn-primary {
+            background: #f6c9c5;
+            color: #2D4544;
+            transition: all 0.2s ease;
+        }
+        .btn-primary:hover {
+            background: #f1e8e8;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px -10px rgba(246, 201, 197, 0.4);
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+    
+    <!-- Nav -->
+    <nav class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="logo.svg" alt="brinvest" class="h-24">
+        </a>
+        <a href="index.html" class="btn-primary px-5 py-2.5 rounded-full text-sm font-medium">
+            Voltar ao início
+        </a>
+    </nav>
+
+    <!-- Content -->
+    <section class="max-w-4xl mx-auto px-6 py-16">
+        <h1 class="text-4xl md:text-5xl font-bold mb-8">Política de Privacidade</h1>
+        <p class="text-muted mb-8">Última atualização: 20 de dezembro de 2025</p>
+        
+        <div class="space-y-8">
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">1. Introdução</h2>
+                <p class="text-muted leading-relaxed">
+                    A brinvest ("nós", "nosso" ou "Empresa") é uma plataforma 100% descentralizada que opera em DeFi (Finanças Descentralizadas) com modelo self-custody. Esta Política de Privacidade explica como tratamos informações quando você utiliza nosso aplicativo e serviços.
+                </p>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">2. Natureza Descentralizada e Self-Custody</h2>
+                <p class="text-muted leading-relaxed mb-4">
+                    <strong class="text-brand-cream">Importante:</strong> A brinvest é uma plataforma 100% descentralizada. Isso significa que:
+                </p>
+                <ul class="list-disc list-inside text-muted space-y-2">
+                    <li>Você mantém a custódia total dos seus ativos (self-custody)</li>
+                    <li>Suas chaves privadas pertencem exclusivamente a você</li>
+                    <li>Não temos acesso nem controle sobre seus fundos</li>
+                    <li>Todas as transações ocorrem diretamente na blockchain</li>
+                    <li><strong class="text-brand-cream">O aplicativo brinvest não coleta, armazena ou processa dados pessoais dos usuários</strong></li>
+                </ul>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">3. Serviços de On/Off Ramp (BlindPay)</h2>
+                <p class="text-muted leading-relaxed mb-4">
+                    Para converter moeda fiduciária (BRL) em tokens e vice-versa, utilizamos os serviços de on/off ramp fornecidos pela <strong class="text-brand-cream">BlindPay</strong>, um provedor terceirizado. Sobre este serviço:
+                </p>
+                <ul class="list-disc list-inside text-muted space-y-2">
+                    <li><strong class="text-brand-cream">KYC (Verificação de Identidade):</strong> A BlindPay coleta e processa dados pessoais para cumprir obrigações de KYC e AML (Anti-Lavagem de Dinheiro)</li>
+                    <li><strong class="text-brand-cream">Dados Coletados pela BlindPay:</strong> Nome, CPF, documentos de identidade, informações bancárias e outros dados necessários para verificação</li>
+                    <li><strong class="text-brand-cream">Responsabilidade:</strong> A BlindPay é a única responsável pela coleta, processamento e armazenamento desses dados</li>
+                    <li><strong class="text-brand-cream">A brinvest não armazena:</strong> Nenhum dado pessoal coletado pela BlindPay é armazenado ou acessado pela brinvest</li>
+                </ul>
+                <p class="text-muted leading-relaxed mt-4">
+                    Para informações detalhadas sobre como a BlindPay trata seus dados, consulte a <a href="https://blindpay.com/privacy" target="_blank" rel="noopener noreferrer" class="text-brand-pink hover:underline">Política de Privacidade da BlindPay</a>.
+                </p>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">4. Informações que a brinvest NÃO Coleta</h2>
+                <p class="text-muted leading-relaxed mb-4">Como plataforma descentralizada, a brinvest <strong class="text-brand-cream">NÃO</strong> coleta ou armazena:</p>
+                <ul class="list-disc list-inside text-muted space-y-2">
+                    <li>Informações de identificação pessoal (nome, CPF, endereço)</li>
+                    <li>Documentos de identidade ou selfies</li>
+                    <li>Informações bancárias</li>
+                    <li>Chaves privadas ou seeds de carteiras</li>
+                    <li>Histórico de transações pessoais identificáveis</li>
+                    <li>Dados de login ou senhas (em modelo self-custody, você controla seu acesso)</li>
+                </ul>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">5. Informações Técnicas Mínimas</h2>
+                <p class="text-muted leading-relaxed mb-4">
+                    O aplicativo pode coletar informações técnicas mínimas e anônimas para funcionamento, como:
+                </p>
+                <ul class="list-disc list-inside text-muted space-y-2">
+                    <li>Dados de uso agregados e anônimos para melhorar a experiência</li>
+                    <li>Informações de crash reports para correção de bugs</li>
+                    <li>Preferências locais do aplicativo (armazenadas apenas no seu dispositivo)</li>
+                </ul>
+                <p class="text-muted leading-relaxed mt-4">
+                    Essas informações não são vinculadas à sua identidade e não permitem identificação pessoal.
+                </p>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">6. Transparência Blockchain</h2>
+                <p class="text-muted leading-relaxed">
+                    As transações realizadas através da brinvest ocorrem em blockchain pública. Isso significa que os endereços de carteira e transações são publicamente visíveis na blockchain. No entanto, esses endereços não estão vinculados à sua identidade pessoal pela brinvest.
+                </p>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">7. Segurança Self-Custody</h2>
+                <p class="text-muted leading-relaxed mb-4">
+                    Em um modelo self-custody, a segurança dos seus ativos é sua responsabilidade:
+                </p>
+                <ul class="list-disc list-inside text-muted space-y-2">
+                    <li>Mantenha suas chaves privadas e seed phrases em local seguro</li>
+                    <li>Nunca compartilhe suas chaves privadas com ninguém</li>
+                    <li>A brinvest nunca solicitará suas chaves privadas</li>
+                    <li>Perda de chaves privadas significa perda irreversível de acesso aos seus fundos</li>
+                </ul>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">8. Seus Direitos</h2>
+                <p class="text-muted leading-relaxed mb-4">
+                    Como a brinvest não armazena dados pessoais, os direitos previstos na LGPD (Lei Geral de Proteção de Dados) relacionados aos nossos serviços são naturalmente atendidos:
+                </p>
+                <ul class="list-disc list-inside text-muted space-y-2">
+                    <li>Não há dados pessoais armazenados para acessar, corrigir ou excluir</li>
+                    <li>Você mantém controle total sobre seus ativos e carteira</li>
+                </ul>
+                <p class="text-muted leading-relaxed mt-4">
+                    Para exercer direitos relacionados aos dados coletados pela BlindPay durante o on/off ramp, entre em contato diretamente com a BlindPay.
+                </p>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">9. Terceiros</h2>
+                <p class="text-muted leading-relaxed mb-4">
+                    Nosso serviço integra com terceiros que possuem suas próprias políticas de privacidade:
+                </p>
+                <ul class="list-disc list-inside text-muted space-y-2">
+                    <li><strong class="text-brand-cream">BlindPay:</strong> Serviços de on/off ramp e KYC</li>
+                    <li><strong class="text-brand-cream">Protocolos DeFi:</strong> Smart contracts e protocolos descentralizados</li>
+                </ul>
+                <p class="text-muted leading-relaxed mt-4">
+                    Recomendamos que você revise as políticas de privacidade desses terceiros.
+                </p>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">10. Alterações nesta Política</h2>
+                <p class="text-muted leading-relaxed">
+                    Podemos atualizar esta Política de Privacidade periodicamente. Alterações significativas serão comunicadas através do aplicativo. Recomendamos que você revise esta política regularmente.
+                </p>
+            </div>
+
+            <div class="bg-card rounded-2xl p-8 border border-subtle">
+                <h2 class="text-2xl font-bold mb-4 text-brand-pink">11. Contato</h2>
+                <p class="text-muted leading-relaxed">
+                    Se você tiver dúvidas sobre esta Política de Privacidade, entre em contato conosco:
+                </p>
+                <div class="mt-4 space-y-2 text-muted">
+                    <p><strong class="text-brand-cream">E-mail:</strong> <a href="mailto:privacy@brinvest.app" class="text-brand-pink hover:underline">privacy@brinvest.app</a></p>
+                    <p><strong class="text-brand-cream">Suporte:</strong> <a href="mailto:support@brinvest.app" class="text-brand-pink hover:underline">support@brinvest.app</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-subtle">
+        <div class="max-w-6xl mx-auto px-6 py-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="logo.svg" alt="brinvest" class="h-24">
+                </a>
+                <div class="flex gap-8 text-sm text-muted">
+                    <a href="privacy.html" class="text-brand-cream">Privacidade</a>
+                    <a href="terms.html" class="hover:text-brand-cream transition-colors">Termos</a>
+                    <a href="mailto:support@brinvest.app" class="hover:text-brand-cream transition-colors">support@brinvest.app</a>
+                </div>
+                <div class="text-sm text-muted">© 2025 brinvest</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
