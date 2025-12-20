@@ -6,15 +6,14 @@ Landing page para o brinvest, um app mobile que permite investir BRL em fundos b
 
 ## 🌐 Site
 
-Acesse: [brinvest.xyz](https://brinvest.xyz)
+Acesse: [brinvest.app](https://brinvest.app)
 
 ## 📊 Sobre o brinvest
 
 O brinvest permite que você invista em fundos brasileiros com alta rentabilidade:
 - **11%+ Rendimento Anual** próximo à SELIC, uma das taxas mais altas do mundo
-- **Depósitos em BRL** via PIX ou transferência bancária
-- **Token brFUND** com rendimento próximo à SELIC
-- **R$50 Investimento Mínimo** para acessibilidade
+- **Depósitos em EUR/USD** com conversão automática
+- **$50 Investimento Mínimo** para acessibilidade
 - **Resgates via PIX** ou transferência bancária
 
 ## 🚀 Funcionalidades da Landing Page
